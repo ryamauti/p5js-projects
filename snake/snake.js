@@ -1,28 +1,35 @@
-var tam = 80;
+var tam = 40;
+var frutaQtde = 10;
+var frutas = [];
 var col;
 var row;
+
 
 function setup() {
 	createCanvas(1200, 800);
 	s = new Snake();
-	a = new Apple();
+	for (var i = 0; i < frutaQtde; i++) {
+		frutas[i] = new Apple();
+	}	
 	frameRate(10);
 }
 
 function draw() {
 	// put drawing code here
 	background(51);
-	s.update();	
-	checaFruta();	 
+	s.update();			 
 	s.show();  
-	a.show();
+	for (var i = 0; i < frutaQtde; i++) {
+		checaFruta(i);
+		frutas[i].show();
+	}	
 	checaColisao();
 }
 
-function checaFruta() {
-	if (s.x[0] === a.x && s.y[0] === a.y) {		
-		s.grow();				
-		a = new Apple();
+function checaFruta(i) {
+	if (s.x[0] === frutas[i].x && s.y[0] === frutas[i].y) {		
+		s.grow(frutas[i].value);				
+		frutas[i] = new Apple();
 	}
 }
 
@@ -55,16 +62,13 @@ function Apple() {
 				this.checa = 1;
 			}
 		} 
-	} while (this.checa > 0);
-	
-
-	
+	} while (this.checa > 0);	
 
 	this.spd = [0, 0];
-	this.value = 1;
+	this.value = floor(random(1, 6));
 
-	this.show = function() {
-		fill(255, 0, 0);
+	this.show = function() {		
+		fill(255 - (this.value - 1)*50, 0, 0);
 		rect(this.x, this.y, tam, tam);
 	}
 }
@@ -81,8 +85,8 @@ function Snake() {
 		this.spd[1] = y;		
 	}
 
-	this.grow = function() {
-		this.value += 1;				
+	this.grow = function(x) {
+		this.value += x;				
 	}
 
 	this.update = function() {
