@@ -1,0 +1,27 @@
+Sun, 18 Nov 2018 23:46:52 GMT express:application set "x-powered-by" to true
+Sun, 18 Nov 2018 23:46:52 GMT express:application set "etag" to 'weak'
+Sun, 18 Nov 2018 23:46:52 GMT express:application set "etag fn" to [Function: generateETag]
+Sun, 18 Nov 2018 23:46:52 GMT express:application set "env" to 'development'
+Sun, 18 Nov 2018 23:46:52 GMT express:application set "query parser" to 'extended'
+Sun, 18 Nov 2018 23:46:52 GMT express:application set "query parser fn" to [Function: parseExtendedQueryString]
+Sun, 18 Nov 2018 23:46:52 GMT express:application set "subdomain offset" to 2
+Sun, 18 Nov 2018 23:46:52 GMT express:application set "trust proxy" to false
+Sun, 18 Nov 2018 23:46:52 GMT express:application set "trust proxy fn" to [Function: trustNone]
+Sun, 18 Nov 2018 23:46:52 GMT express:application booting in development mode
+Sun, 18 Nov 2018 23:46:52 GMT express:application set "view" to [Function: View]
+Sun, 18 Nov 2018 23:46:52 GMT express:application set "views" to '/home/rogerio/Dev/p5js/p5js/chat-example/views'
+Sun, 18 Nov 2018 23:46:52 GMT express:application set "jsonp callback name" to 'callback'
+2018-11-18T23:46:52.320Z socket.io:server initializing namespace /
+2018-11-18T23:46:52.320Z socket.io-parser encoding packet {"type":0,"nsp":"/"}
+2018-11-18T23:46:52.321Z socket.io-parser encoded {"type":0,"nsp":"/"} as 0
+2018-11-18T23:46:52.321Z socket.io:server creating engine.io instance with opts {"path":"/socket.io","initialPacket":["0"]}
+2018-11-18T23:46:52.335Z socket.io:server attaching client serving req handler
+Sun, 18 Nov 2018 23:46:52 GMT express:router use '/' query
+Sun, 18 Nov 2018 23:46:52 GMT express:router:layer new '/'
+Sun, 18 Nov 2018 23:46:52 GMT express:router use '/' expressInit
+Sun, 18 Nov 2018 23:46:52 GMT express:router:layer new '/'
+Sun, 18 Nov 2018 23:46:52 GMT express:router:route new '/'
+Sun, 18 Nov 2018 23:46:52 GMT express:router:layer new '/'
+Sun, 18 Nov 2018 23:46:52 GMT express:router:route get '/'
+Sun, 18 Nov 2018 23:46:52 GMT express:router:layer new '/'
+listening on *:3000
